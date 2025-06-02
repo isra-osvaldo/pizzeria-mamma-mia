@@ -1,5 +1,6 @@
 import { formatNumberCL } from "../helpers/formatNumber"
 
+
 const CardPizza = ({ name, price, ingredients, img }) => {
 
     const priceFormat = formatNumberCL(price)
@@ -22,7 +23,7 @@ const CardPizza = ({ name, price, ingredients, img }) => {
                         <h4>Precio: ${ priceFormat }</h4>
                         <div className="buttons-buy">
                             <button className="btn btn-ver-mas">Ver más 👀</button>
-                            <button className="btn btn-añadir">Añadir 🛒</button>
+                            <button className="btn btn-añadir">Añadir <i className="bi bi-cart-fill"></i></button>
                         </div>
                     </div>
                 </div>
