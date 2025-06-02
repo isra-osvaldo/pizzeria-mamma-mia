@@ -108,8 +108,9 @@
 }
 
 .ingredients-box .ingredients-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 12px;
+  color: var(--gray-color);
 }
 
 .ingredients-box .ingredients {
