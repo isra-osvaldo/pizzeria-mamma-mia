@@ -1,0 +1,174 @@
+:root {
+  --navbar-color: #1e2329;
+  --white-color: #feffff;
+  --total-color: #25aec3;
+  --footer-color: #212529;
+  --gray-color: #8f9091;
+}
+
+/** Navbar **/
+.navbar {
+  background-color: var(--navbar-color);
+  color: var(--white-color);
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+  border: 1px solid var(--white-color);
+  font-size: .8rem;
+  padding: 6px 8px;
+  border-radius: 5px;
+  display: flex;
+  gap: 3px;
+  text-align: center;
+}
+
+.btn-total {
+  border-color: var(--total-color);
+  color: var(--total-color);
+}
+
+/** Header **/
+
+.header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
+    url('./assets/images/header.jpg'); 
+  background-size: cover;
+  height: 40dvh;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.header p {
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.header .line {
+  width: 80%;
+  border: none;
+  border: .5px solid #8f9091;
+  margin-top: 10px;
+}
+
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body .title {
+  border: .5px solid var(--gray-color);
+  border-left: none;
+  border-right: none;
+  padding: 15px 0;
+  font-size: 1.2rem;
+}
+
+.card-body .title h4 {
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.card-body .ingredients-box {
+  border: .5px solid var(--gray-color);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.ingredients-box .ingredients-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.ingredients-box .ingredients {
+  font-size: .8rem;
+}
+
+.buy {
+  border-top: none;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.buy h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.buttons-buy {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.btn-ver-mas {
+  border-color: #222;
+  transition: all .3s ease-in-out;
+}
+
+.btn-ver-mas:hover {
+  background-color: #222;
+  color: var(--white-color)
+}
+
+.btn-añadir {
+  background-color: #222;
+  color: var(--white-color);
+  transition: all .3s ease-in-out;
+}
+
+.btn-añadir:hover {
+  border-color: #222;
+  background-color: var(--white-color);
+  color: #222;
+}
+
+.card {
+  width: 400px;
+  border: .5px solid var(--gray-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/** Footer **/
+
+.footer {
+  background-color: var(--footer-color);
+  color: var(--white-color);
+  text-align: center;
+  font-size: .9rem;
+  padding: 25px;
+}
