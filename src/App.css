@@ -45,7 +45,7 @@
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
     url('./assets/images/header.jpg'); 
   background-size: cover;
-  height: 40dvh;
+  height: 35dvh;
   color: var(--white-color);
   display: flex;
   flex-direction: column;
