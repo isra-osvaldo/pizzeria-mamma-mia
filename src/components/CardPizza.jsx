@@ -1,20 +1,22 @@
+import { formatNumberCL } from "../helpers/formatNumber"
 
-const CardPizza = () => {
+
+const CardPizza = ({ name, price, ingredients, img }) => {
   return (
     <article className="card">
         <img 
-            src="https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_cl.jpg?alt=media&token=6a9a33da-5c00-49d4-9080-784dcc87ec2c" 
-            alt="Pizza Napolitana" />
+            src= { img } 
+            alt= { name } />
             <div className="card-body">
                 <div className="title">
-                    <h4>Pizza Napolitana</h4>
+                    <h4>Pizza { name } </h4>
                 </div>
                 <div className="ingredients-box">
                     <p className="ingredients-title">Ingredientes:</p>
-                    <p className="ingredients">🍕 mozzarella, tomates, jamón, orégano</p>
+                    <p className="ingredients">🍕 { ingredients.join(", ") }</p>
                 </div>  
                 <div className="buy">
-                    <h4>Precio: $5.950</h4>
+                    <h4>Precio: ${ formatNumberCL(price) }</h4>
                     <div className="buttons-buy">
                         <button className="btn btn-ver-mas">Ver más 👀</button>
                         <button className="btn btn-añadir">Añadir 🛒</button>
