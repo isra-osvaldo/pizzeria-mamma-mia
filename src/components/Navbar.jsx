@@ -1,4 +1,4 @@
-import ButtonNavbar from "./ButtonNavbar"
+import { formatNumberCL } from "../helpers/formatNumber"
 
 const Navbar = () => {
     const total = 25000;
@@ -13,7 +13,7 @@ const Navbar = () => {
         <button className="btn">{ token ? "🔓 Logout" : "🔐 Register" }</button>
       </div>
 
-      <button className="btn btn-total"><span>🛒</span>Total: ${ total }</button>
+      <button className="btn btn-total"><span>🛒</span>Total: ${ formatNumberCL(total) }</button>
     </nav>
   )
 }
