@@ -8,9 +8,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="left">
         <p>Pizzería Mamma Mía!</p>
-        <ButtonNavbar icon="🍕" text="Home" />
-        <ButtonNavbar icon="🔐" text="Login" />
-        <ButtonNavbar icon="🔐" text="Register" />
+        <button className="btn">🍕 Home</button>
+        <button className="btn">{ token ? "🔓 Profile" : "🔐 Login" }</button>
+        <button className="btn">{ token ? "🔓 Logout" : "🔐 Register" }</button>
       </div>
 
       <button className="btn btn-total"><span>🛒</span>Total: ${ total }</button>

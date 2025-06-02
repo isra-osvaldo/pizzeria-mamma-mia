@@ -157,7 +157,7 @@
 }
 
 .card {
-  width: 400px;
+  width: 350px;
   border: .5px solid var(--gray-color);
   border-radius: 12px;
   overflow: hidden;
