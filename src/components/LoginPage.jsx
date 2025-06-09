@@ -46,54 +46,58 @@ export default function LoginPage() {
   return (
     <section className="fondo-imagen">
       <div className="container d-flex justify-content-center align-items-center vh-100">
-      <div className="row w-100">
-          <form 
-          className="mx-auto borde-gris rounded px-5 py-4 m-5 text-white appointment-form" 
-          style={{ maxWidth: "500px", width: "80%" }}
-          onSubmit={validarDatos}>
-          <div className="header-login">
-            <h3 className="text-center mt-4 text-uppercase fs-2">Login</h3>
-          </div>
-          <div className="mt-4 mb-3">
-            <input
-              value={formData.email}
-              name="email"
-              type="email"
-              placeholder="Email"
-              className="form-control"
-              id="email"
-              aria-describedby="emailHelp"
-              onChange={handleChange}
-            />
-          </div>
+        <div className="row w-100">
+          <form
+            className="mx-auto borde-gris rounded px-5 py-4 m-5 text-white appointment-form"
+            style={{ maxWidth: "500px", width: "80%" }}
+            onSubmit={validarDatos}
+          >
+            <div className="header-login">
+              <h3 className="text-center mt-4 text-uppercase fs-2">Login</h3>
+            </div>
+            <div className="mt-4 mb-3">
+              <input
+                value={formData.email}
+                name="email"
+                type="email"
+                placeholder="Email"
+                className="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                onChange={handleChange}
+              />
+            </div>
 
-          <div className="mb-3">
-            <input
-              value={formData.contrasena}
-              name="contrasena"
-              placeholder="Password"
-              type="password"
-              className="form-control"
-              id="contrasena"
-              onChange={handleChange}
-            />
-          </div>
+            <div className="mb-3">
+              <input
+                value={formData.contrasena}
+                name="contrasena"
+                placeholder="Password"
+                type="password"
+                className="form-control"
+                id="contrasena"
+                onChange={handleChange}
+              />
+            </div>
 
-          {message && (
-            <p className={`text-center p-2 rounded mt-5 text-white ${error ? "bg-danger" : success ? "bg-success" : ""}`}
-            >
-              {message}
-            </p>
-          )}
+            {message && (
+              <p
+                className={`text-center p-2 rounded mt-5 text-white ${
+                  error ? "bg-danger" : success ? "bg-success" : ""
+                }`}
+              >
+                {message}
+              </p>
+            )}
 
-          <div className="text-center mt-4 mb-4">
-            <button type="submit" className="btn btn-light">
-              Iniciar Sesión
-            </button>
-          </div>
+            <div className="text-center mt-4 mb-4">
+              <button type="submit" className="btn btn-light">
+                Iniciar Sesión
+              </button>
+            </div>
           </form>
+        </div>
       </div>
-    </div>
     </section>
   );
 }

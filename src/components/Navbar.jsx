@@ -2,7 +2,7 @@ import { formatNumberCL } from "../helpers/formatNumber";
 
 const Navbar = () => {
   const total = 25000;
-  const token = false;
+  const token = true;
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,20 +24,33 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav d-flex justify-content-center gap-2 w-100">
             <li className="nav-item">
-              <a className="btn btn-outline-white px-2 py-1 fs-smaller" aria-current="page" href="#">
-                🍕 Home
-              </a>
+              <a className="btn btn-outline-white px-2 py-1 fs-smaller" aria-current="page" href="#">🍕 Home</a>
             </li>
-            <li className="nav-item">
-              <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">
-                {token ? "🔓 Profile" : "🔐 Login"}
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">
-                {token ? "🔓 Logout" : "🔐 Register"}
-              </a>
-            </li>
+            
+            { 
+                !token ? (
+                <>
+                  <li className="nav-item">
+                    <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">🔓 Profile</a>
+                  </li>
+
+                  <li className="nav-item">
+                    <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">🔐 Login</a>
+                  </li>
+                </>
+                ) : (
+                  <>
+                    <li className="nav-item">
+                      <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">🔓 Logout</a>
+                    </li>
+
+                    <li className="nav-item">
+                      <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">🔐 Register</a>
+                    </li>
+                  </>
+              )
+            }
+
             <li className="nav-item ms-auto">
               <a className="btn btn-outline-total-color  px-2 py-1 fs-smaller" href="#">
                 <span className="fs-smaller">🛒 Total: ${formatNumberCL(total)}</span>
