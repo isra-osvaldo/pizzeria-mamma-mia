@@ -52,9 +52,12 @@ export default function RegisterPage() {
   return (
     <div className="container">
       <div className="row">
-        <form className="mx-auto" onSubmit={ validarDatos }>
+        <form 
+          className="mx-auto px-5 py-4 m-5 rounded" 
+          style={{ maxWidth: "500px", width: "100%", border: "1px solid #ccc" }}
+          onSubmit={ validarDatos }>
           <h3 className="text-center mt-4">Formulario de Registro</h3>
-          <div className="mb-3">
+          <div className="mt-5 mb-3">
             <label htmlFor="email" className="form-label">
               Email
             </label>

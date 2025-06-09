@@ -6,33 +6,6 @@
   --gray-color: #8f9091;
 }
 
-/** Navbar **/
-/* .navbar {
-  background-color: var(--navbar-color);
-  color: var(--white-color);
-  display: flex;
-  padding: 15px;
-  justify-content: space-between;
-} */
-
-/* .left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-} */
-
-/* .btn {
-  all: unset;
-  cursor: pointer;
-  border: 1px solid var(--white-color);
-  font-size: .8rem;
-  padding: 6px 8px;
-  border-radius: 5px;
-  display: flex;
-  gap: 3px;
-  text-align: center;
-} */
-
 .btn-outline-white {
   color: white !important; 
   border-color: white !important;
@@ -44,9 +17,9 @@
 }
 
 .btn-outline-total-color:hover {
-  color: #4dd4eb !important; /* versión más brillante del color */
+  color: #4dd4eb !important; 
   border-color: #4dd4eb !important;
-  background-color: rgba(77, 212, 235, 0.1); /* un toque de fondo opcional */
+  background-color: rgba(77, 212, 235, 0.1); 
 }
 
 .btn-outline-white:hover,
@@ -198,4 +171,41 @@
   text-align: center;
   font-size: .9rem;
   padding: 25px;
+}
+
+.fondo-imagen {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
+    url('./assets/images/bg-wooden.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+}
+
+.borde-gris {
+  border: 1px solid rgba(200, 200, 200, 0.4); 
+}
+
+.appointment-form .form-control {
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 14px;
+    height: 58px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+    border-color: transparent transparent rgba(255, 255, 255, 0.2) !important;
+    border-image: initial !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: transparent !important;
+}
+
+.appointment-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.pizza-img {
+  width: 200px;
 }
