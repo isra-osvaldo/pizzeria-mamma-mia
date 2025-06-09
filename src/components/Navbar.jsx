@@ -5,13 +5,13 @@ const Navbar = () => {
   const token = false;
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand fs-6" href="#">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+        <a className="navbar-brand fs-6" href="#">
           Pizzería Mamma Mía!
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -19,27 +19,27 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav d-flex justify-content-center gap-2 w-100">
-            <li class="nav-item">
-              <a class="btn btn-outline-white px-2 py-1 fs-smaller" aria-current="page" href="#">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav d-flex justify-content-center gap-2 w-100">
+            <li className="nav-item">
+              <a className="btn btn-outline-white px-2 py-1 fs-smaller" aria-current="page" href="#">
                 🍕 Home
               </a>
             </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-white px-2 py-1 fs-smaller" href="#">
+            <li className="nav-item">
+              <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">
                 {token ? "🔓 Profile" : "🔐 Login"}
               </a>
             </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-white px-2 py-1 fs-smaller" href="#">
+            <li className="nav-item">
+              <a className="btn btn-outline-white px-2 py-1 fs-smaller" href="#">
                 {token ? "🔓 Logout" : "🔐 Register"}
               </a>
             </li>
-            <li class="nav-item ms-auto">
-              <a class="btn btn-outline-total-color  px-2 py-1 fs-smaller" href="#">
+            <li className="nav-item ms-auto">
+              <a className="btn btn-outline-total-color  px-2 py-1 fs-smaller" href="#">
                 <span className="fs-smaller">🛒 Total: ${formatNumberCL(total)}</span>
               </a>
             </li>

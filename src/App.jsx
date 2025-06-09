@@ -2,13 +2,18 @@ import './App.css'
 import Footer from './components/Footer'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import RegisterPage from './components/RegisterPage'
+import LoginPage from './components/LoginPage'
+
 
 
 function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      {/* <Home /> */}
+      {/* <RegisterPage /> */}
+      <LoginPage />
       <Footer />
     </>
   )
