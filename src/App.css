@@ -157,6 +157,10 @@
   padding: 25px;
 }
 
+.btn-pay {
+  width: 100px;
+}
+
 /* .fondo-imagen {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
     url('./assets/images/bg-wooden.jpg'); 

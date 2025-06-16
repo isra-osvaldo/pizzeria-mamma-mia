@@ -28,10 +28,13 @@ export default function Cart() {
                 <span>1</span>
                 <button className="btn btn-outline-primary py-1">+</button>
               </div>
-
             </div>
-            
           ))}
+
+          <div className="d-flex flex-column gap-3 mt-3 w-25">
+            <span className="fs-3 fw-semibold text-nowrap">Total: $0</span>
+            <button className="btn btn-dark btn-pay">Pagar</button>
+          </div>
         </div>
       </div>
 
