@@ -6,41 +6,41 @@ export default function LoginPage() {
     contrasena: "",
   });
 
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [message, setMessage] = useState("");
+  const [error, setError] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [message, setMessage] = useState("")
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(false);
-    setSuccess(false);
-    setMessage("");
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setError(false)
+    setSuccess(false)
+    setMessage("")
   };
 
   const validarDatos = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (!formData.email || !formData.contrasena) {
-      setError(true);
+      setError(true)
       setMessage("Todos los campos son obligatorios.");
       return;
     }
 
     if (formData.contrasena.length < 6) {
-      setError(true);
+      setError(true)
       setMessage("La contraseña debe tener al menos 6 caracteres.");
       return;
     }
 
-    setError(false);
-    setSuccess(true);
-    setMessage("Registro exitoso. Bienvenido!");
+    setError(false)
+    setSuccess(true)
+    setMessage("Registro exitoso. Bienvenido!")
     setFormData({
       email: "",
       contrasena: "",
     });
 
-    console.log("Datos enviados:", formData);
+    console.log("Datos enviados:", formData)
   };
 
   return (

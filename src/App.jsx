@@ -6,14 +6,13 @@ import RegisterPage from './components/RegisterPage'
 import LoginPage from './components/LoginPage'
 
 
-
 function App() {
   return (
     <>
       <Navbar />
-      {/* <Home /> */}
+      <Home />
       {/* <RegisterPage /> */}
-      <LoginPage />
+      {/* <LoginPage /> */}
       <Footer />
     </>
   )
