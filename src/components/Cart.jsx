@@ -48,16 +48,16 @@ export default function Cart() {
               </div>
               
               <div className="d-flex gap-3 align-items-center flex-wrap text-nowrap">
-                <p className="mb-0 fw-semibold">${pizza.price}</p>
+                <p className="mb-0 fw-semibold">${formatNumberCL(pizza.price)}</p>
                 <button 
-                  className="btn btn-outline-danger py-1"
+                  className="btn btn-outline-danger py-1 btn-thick-border"
                   onClick={() => disminuirCantidad(pizza.id)}
                   >
                   -
                 </button>
-                <span>{pizza.count}</span>
+                <span className="fw-semibold">{pizza.count}</span>
                 <button 
-                  className="btn btn-outline-primary py-1"
+                  className="btn btn-outline-primary py-1 btn-thick-border"
                   onClick={() => aumentarCantidad(pizza.id)}
                 >
                   +
