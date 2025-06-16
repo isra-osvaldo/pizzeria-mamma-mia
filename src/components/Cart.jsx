@@ -50,14 +50,14 @@ export default function Cart() {
               <div className="d-flex gap-3 align-items-center flex-wrap text-nowrap">
                 <p className="mb-0 fw-semibold">${formatNumberCL(pizza.price)}</p>
                 <button 
-                  className="btn btn-outline-danger py-1 btn-thick-border"
+                  className="btn btn-outline-danger py-1 btn-thick-border fw-semibold"
                   onClick={() => disminuirCantidad(pizza.id)}
                   >
                   -
                 </button>
                 <span className="fw-semibold">{pizza.count}</span>
                 <button 
-                  className="btn btn-outline-primary py-1 btn-thick-border"
+                  className="btn btn-outline-primary py-1 btn-thick-border fw-semibold"
                   onClick={() => aumentarCantidad(pizza.id)}
                 >
                   +
