@@ -141,6 +141,12 @@
   overflow: hidden;
 }
 
+.img-small {
+  max-width: 50px;
+  height: auto;
+  border-radius: 2px;
+}
+
 /** Footer **/
 
 .footer {
