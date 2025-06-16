@@ -1,11 +1,9 @@
 import { formatNumberCL } from "../helpers/formatNumber"
 import { icons } from "../data/ingredient-icons"
-import { capitalizeWords } from "../helpers/capitalizeWords"
-
 
 const CardPizza = ({ name, price, ingredients, img }) => {
     const priceFormat = formatNumberCL(price)
-    const nameCapitalized = capitalizeWords(name)
+
     return (
         <article className="card">
             <img 
@@ -13,7 +11,7 @@ const CardPizza = ({ name, price, ingredients, img }) => {
                 alt= { name } />
                 <div className="card-body">
                     <div className="title">
-                        <h4>Pizza { nameCapitalized } </h4>
+                        <h4 className="text-capitalize">Pizza { name } </h4>
                     </div>
                     <div className="ingredients-box">
                         <p className="ingredients-title">Ingredientes:</p>
@@ -24,10 +22,10 @@ const CardPizza = ({ name, price, ingredients, img }) => {
                             
                             return (
                                 <li key={index}
-                                    className="border rounded px-2 py-1 mb-1 ingredients "
+                                    className="border rounded px-2 py-1 mb-1 ingredients text-capitalize"
                                 >
                                   <span className="me-1">{icon}</span> 
-                                  { capitalizeWords(ingredient) }
+                                  { ingredient }
                                 </li>
                             )})}
                         </ul>

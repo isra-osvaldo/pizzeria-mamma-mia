@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { pizzaCart } from "../data/pizzas"
-import { capitalizeWords } from "../helpers/capitalizeWords"
 import { formatNumberCL } from "../helpers/formatNumber"
 
 export default function Cart() {
@@ -20,7 +19,7 @@ export default function Cart() {
       .map(pizza => 
         pizza.id === id ? {...pizza, count: pizza.count - 1} : pizza
       )
-      .filter(pizza => pizza != null && pizza.count > 0)
+      .filter(pizza => pizza.count > 0)
       setCart(updateCart)
   }
 
@@ -44,7 +43,7 @@ export default function Cart() {
                   alt="pizza" 
                   className="img-small" 
                 />
-                <p className="mb-0 fw-semibold">{capitalizeWords(pizza.name)}</p>
+                <p className="mb-0 fw-semibold text-capitalize">{ pizza.name }</p>
               </div>
               
               <div className="d-flex gap-3 align-items-center flex-wrap text-nowrap">
